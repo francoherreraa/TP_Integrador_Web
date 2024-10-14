@@ -1,0 +1,53 @@
+
+/* -----DISEÑO HEADER----- */
+
+.cabecera input, details{
+    margin-top: 20px;     
+}
+
+.cabecera input{
+    width: 300px;
+    height: 25px;  
+}
+
+.cabecera{
+    display: flex;
+}
+
+/* -----DISEÑO FOOTER----- */
+
+footer{
+    background-color: rgb(176, 211, 240);    
+}
+
+footer h1{
+    color: rgb(255, 255, 255);
+}
+
+.redes, .contacto{
+    display: flex;
+}
+
+
+
+.secciones label{
+    font-size: 30px;
+}
+
+.promo{
+    width: 300px;
+    height: 300px;
+    background: rgb(185, 176, 148);
+}    
+
+.destacados{
+    width: 300px;
+    height: 300px;
+    background: rgb(230, 227, 135);
+}
+
+.patrocinio{
+    width: 300px;
+    height: 300px;
+    background: rgb(222, 151, 228);
+}
