@@ -109,3 +109,10 @@ p, input {
   .textoPerfil {
     margin-top: 20px;
   }
+
+
+/* -----DISEÑO BODY----- */
+
+body{
+  background-color: rgb(37, 36, 36);
+}
