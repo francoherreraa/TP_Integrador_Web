@@ -141,16 +141,72 @@ body {
 /* -----DISEÑO FOOTER----- */
 
 footer {
-  background-color: rgb(176, 211, 240);
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: rgb(35,34,35);
 }
 
 footer h1 {
   color: rgb(255, 255, 255);
 }
 
-.redes, .contacto {
-  display: flex;
+.redes, .contacto, .horarios, .defensa, .ayuda, .legales{
+  display: inline-table;
 }
+
+.contacto{
+  margin-left: 70px;
+}
+
+.redes, .horarios, .ayuda, .defensa, .contacto, .legales{
+  margin-left: 60px;
+}
+
+.defensa sub :hover, .ayuda sub :hover,.contacto p :hover{
+  color: #068706;
+}
+
+.defensa a, .ayuda a, .contacto a, .horarios a{
+  margin: 5px;
+  font-family: sans-serif;
+  font-size: 15px;  
+  
+}
+
+.redes img{
+  
+  width: 40px;
+  
+}
+
+
+
+#sub1 img{
+  margin-left: 100px; 
+  margin-top: 5px;
+  width: 120px;
+  height: 50px;
+}
+
+#sub2 img{
+  margin-top: 40px;
+  width: 250px;
+}
+
+#sub3 img{
+  width: 60px;
+  height: 70px;
+  margin-left: 15px;
+}
+
+footer h2{
+  color: #08bc08; 
+}
+
+footer sub h2{
+  color: #ffffff; 
+}
+
 
 
 
