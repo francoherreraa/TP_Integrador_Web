@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Pagina web</title>
-
+    
   </head>
 
   <!-- HEADER ENCABEZADO-->
@@ -64,14 +64,22 @@
 
   <body>
 
-    <div class="secciones">
-      <section class="promo">
+  <!-- -----PROMOCIONADOS SLIDER----- -->
+
+    <div class="promocionados">
+      <div class="promo">
         <a href=""><img src="images/imgCarrusel1.webp" alt=""></a>
         <a href=""><img src="images/imgCarrusel2.webp" alt=""></a>
         <a href=""><img src="images/imgCarrusel3.webp" alt=""></a>
-      </section>
-     </div> 
+        
+        
+      </div>
+      <button class="retroceder" onclick="retrocederImgs()">&#8249</button>
+        <button class="avanzar" onclick="avanzarImgs()">&#8250</button>
+    </div> 
   
+
+
     <div> 
       <section class="destacados">
         <label for=""> DESTACADOS</label>
@@ -184,5 +192,7 @@
         </div>
 
       </footer>
+
+      <script src="script.js"></script>
   </body>
 </html>

@@ -146,19 +146,55 @@ body {
 
 /* -----DISEÑO PROMO-----*/
 
-.promo {
-  
+.promo { 
   background: rgb(36, 37, 39);;
 }
 
-.promo img{
-  align-items: center;
-  justify-content: center;
-  display: inline-table;
-  width:300px;
-
-  margin-left: 30px;
+.promocionados{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
+
+.promocionados img{
+  width: 100%;
+  display: none; 
+}
+
+img.carrusel{
+  display: block;
+  
+}
+
+
+.promocionados button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 90px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-left: 15px;
+  background: none;
+  color: #068706;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+.retroceder{
+  left: 0;
+}
+
+.avanzar{
+  right: 0;
+}
+
+
+
+
 
 
 
