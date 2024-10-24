@@ -111,29 +111,149 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* -----DISEÑO SECCIONES-----*/
 
-.secciones label {
+.secciones label, .destacados label, .patrocinio label {
   font-size: 30px;
 }
 
-.promo {
-  width: 100%;
-  height: 300px;
-  background: rgb(185, 176, 148);
-}
 
 .destacados {
-  width: 100%;
-  height: 300px;
-  background: rgb(230, 227, 135);
-}
-
-.patrocinio {
+ 
   width: 300px;
   height: 300px;
-  background: rgb(222, 151, 228);
+  background: rgb(36, 37, 39);;
 }
+
+
+
+
+
+
+
+
+/* -----DISEÑO PROMO-----*/
+
+.promo {
+  
+  background: rgb(36, 37, 39);;
+}
+
+.promo img{
+  align-items: center;
+  justify-content: center;
+  display: inline-table;
+  width:300px;
+
+  margin-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* -----DISEÑO SPONSORS-----*/
+
+.patrocinio {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width:auto;
+  height: 300px;
+  background: rgb(36, 37, 39);
+}
+
+.patrocinio img{
+  margin: 20px;
+  width: 120px;
+  height: 60px;
+}
+
+.celda{
+
+  border: 1px rgb(79,70,71);
+  border-style: solid;
+  background-color: rgb(57,61,62);
+  background-size: cover;
+}
+
+
+.celda img, .celda img :hover li{
+transition: 0.4s;
+filter: invert(52%) sepia(0%) saturate(83%) hue-rotate(188deg) brightness(96%) contrast(91%);
+  
+}
+
+.celda :hover{
+  transition: 0.4s;
+  box-shadow: #08bc08;
+  filter: none;
+}
+
+/* -----AJUSTES A CADA IMAGEN SPONSOR----- */
+
+
+#intel{
+  
+  object-fit: contain;
+  width: 70px;
+  margin-left: 45px;  
+  margin-right: 45px;  
+  
+}
+
+#amd{
+  object-fit: contain;
+  width: 94px;
+  margin-left: 32px;
+  margin-right: 34px;
+
+}
+
+#asus{
+  object-fit: contain;
+  width: 94px;
+  margin-left: 32px;
+  margin-right: 34px;
+}
+
+#hyperx{
+  object-fit: contain;
+  width: 94px;
+
+  margin-left: 32px;
+  margin-right: 34px;
+}
+
+#msi{
+  object-fit: contain;
+  width: 80px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+
+
+
+
+
+
 
 
 
