@@ -3,6 +3,10 @@ p, input {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Helvetica Neue, Arial, sans-serif;
   }
+  h2{
+    font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji, sans-serif !important;
+    font-weight: 400;
+  }
   /* -----DISEÑO HEADER----- */
   .cabecera {
     display: flex;

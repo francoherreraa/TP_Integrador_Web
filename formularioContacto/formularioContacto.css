@@ -3,6 +3,10 @@ p, input {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Helvetica Neue, Arial, sans-serif;
   }
+  h2{
+    font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji, sans-serif !important;
+    font-weight: 400;
+  }
   /* -----DISEÑO HEADER----- */
   .cabecera {
     display: flex;
@@ -10,7 +14,7 @@ p, input {
     background-color: black;
   }
   .secSub{
-    color: #ffffff;
+    color: #595959;
   }
   a {
     text-decoration: none;
@@ -25,7 +29,7 @@ p, input {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    background-color: #6e6e6e;
+    background-color: #ffffff;
     align-items: center;
   }
   .cabeceraAlta {
@@ -58,7 +62,8 @@ p, input {
   }
   
   body {
-    background-color: #ffffff;
+    background-image: url(../inicioSesion-Registro/FondoWe.svg);
+    background-repeat: no-repeat;
     padding: 0;
     margin: 0;
   }
@@ -131,9 +136,7 @@ p, input {
 
 
 
-body{
-  background-color:#ccc5c7;
-}
+
 
 
 
@@ -146,13 +149,16 @@ body{
 .formulario{
   align-items: center;
   justify-items: center;
-  
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
 }
 
 .formulario{
   display: block;
   align-items: spa;
   box-shadow: #01f603;
+  
 }
 
 .formulario #divTitulo  {
@@ -177,7 +183,7 @@ body{
 #mensaje{ 
   border-radius: 10px;
   background-color: #e9eed9;
-  align-items: center;
+  display: flex;
 }
 
 #mensaje p{
@@ -201,7 +207,7 @@ body{
 #formularioContainer{
   display: block;
   border-radius: 25px;
-  margin: 200px;
+  padding: 20px;
   background-color: #e9eed9;
     
 }

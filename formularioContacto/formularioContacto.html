@@ -22,14 +22,14 @@
 
 <header>
     <section class="cabeceraAlta">
-      <img src="/images/cabeceraAlta.svg" alt="imagen cabeceraAlta" />
+      <img src="../images/cabeceraAlta.svg" alt="imagen cabeceraAlta" />
 
       <p>Envios a Todo el país!</p>
     </section>
     <section class="cabecera">
-      <a href="/index.html"><img
+      <a href="../index.html"><img
         class="logo"
-        src="/images/Logo maximus 2.0.svg"
+        src="../images/Logo maximus 2.0.svg"
         alt="palceholder"
         width="300px"
         height="100px"
@@ -47,25 +47,25 @@
             <a href=""
               ><img
                 class="lupa"
-                src="/images/barraBusqueda.svg"
+                src="../images/barraBusqueda.svg"
                 alt="imagen de lupa"
             /></a>
           </div>
         </div>
       </div>
       <div class="fondoPerfil">
-        <a href="./inicioSesion-Registro/inicioSesion.html"><img class="imgPerfil" src="/images/user.svg" alt="imagen perfil"/></a>        
-        <p class="textoPerfil"><a href="/inicioSesion-Registro/inicioSesion.html">Ingresar</a></p>
+        <a href="../inicioSesion-Registro/inicioSesion.html"><img class="imgPerfil" src="../images/user.svg" alt="imagen perfil"/></a>        
+        <p class="textoPerfil"><a href="../inicioSesion-Registro/inicioSesion.html">Ingresar</a></p>
       </div>
     </section>
     <section class="subCabecera">
       <nav>
         <ul>
           <li><a class="formularioContacto" href="formularioContacto.html"><label for="">Contactanos!</a></label></li>
-          <li><a class="secSub" href="/SeccionesHtml/Computadoras.html">Computadoras</a></li>
-          <li><a class="secSub" href="/SeccionesHtml/PlacasDeVideo.html">Placas de video</a></li>
-          <li><a class="secSub" href="/SeccionesHtml/Microprocesadores.html">Microprocesadores</a></li>
-          <li><a class="secSub" href="/SeccionesHtml/Gabinetes.html">Gabinetes</a></li>
+          <li><a class="secSub" href="../SeccionesHtml/Computadoras.html">Computadoras</a></li>
+          <li><a class="secSub" href="../SeccionesHtml/PlacasDeVideo.html">Placas de video</a></li>
+          <li><a class="secSub" href="../SeccionesHtml/Microprocesadores.html">Microprocesadores</a></li>
+          <li><a class="secSub" href="../SeccionesHtml/Gabinetes.html">Gabinetes</a></li>
           <li><div id="conteiner" >
             <div class="toggle" ></div>
        </div></li>
@@ -119,93 +119,16 @@
     </form>
 
         
+    <script src="../script.js"></script>
 
-
-    <!-- SCRIPT -->
-
-<script >
-    function submitForm() {       
-        const nombre = document.getElementById('nombre').value;
-        const correo = document.getElementById('correo').value;
-        const telefono = document.getElementById('telefono').value;
-        const mensajeEnvio = document.getElementById('mensajeEnvio').value;
-            
-        const errores = []; 
-    
-    
-        const expresionesNombre= /^[a-zA-Z\s]{10,}$/;
-        const expresionesMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;   
-        const expresionesTelefono = /^\d{7,15}$/;
-
-    
-        //-- MANEJO DE ERRORES -<!
-    
-        if (!expresionesNombre.test(nombre)) 
-        errores.push("-Ingresa tu nombre y apellido por favor.");
-    
-        if (!expresionesMail.test(correo)) 
-        errores.push("-El correo no puede contener carecteres invalidos.");
-    
-        if (!expresionesTelefono.test(telefono)) 
-        errores.push("-Numero de telefono demasiiado corto.");
-    
-         if (mensajeEnvio.trim() === '') 
-        errores.push("Ingrese un mensaje en la caja de texto.");
-
-        const erroresDiv = document.getElementById('errores');
-        const mostrarDatos = document.getElementById('mensaje');
-
-    
-    
-
-        if (errores.length > 0) {
-            erroresDiv.innerHTML = errores.join('<br>');
-            mostrarDatos.innerHTML = '';
-        } else {
-        
-            erroresDiv.innerHTML = '';        
-            mostrarDatos.innerHTML = '';
-
-        
-        const datosEnviado = document.createElement('p');
-        datosEnviado.innerHTML = '<style>#formularioContainer{margin-bottom: 0px;}</style><b>Datos Enviados:</b>';
-        mostrarDatos.appendChild(datosEnviado);
-
-        const mostrarNombre = document.createElement('p');
-        mostrarNombre.innerHTML = `<b>Nombre:</b> ${nombre}`;
-        mostrarDatos.appendChild(mostrarNombre);
-
-        const mostrarCorreo = document.createElement('p');
-        mostrarCorreo.innerHTML = `<b>Correo Electronico:</b> ${correo}`;
-        mostrarDatos.appendChild(mostrarCorreo);
-
-        const mostrarNumero = document.createElement('p');
-        mostrarNumero.innerHTML = `<b>Numero Telefonico:</b> ${telefono}`;
-        mostrarDatos.appendChild(mostrarNumero);
-
-        const mostrarMensaje = document.createElement('p');
-        mostrarMensaje.innerHTML = `<b>Mensaje:</b> ${mensajeEnvio}`;
-        mostrarDatos.appendChild(mostrarMensaje);
-
-        document.getElementById('formulario').reset();
-        }
-    }
-
-</script>
-
-
-
-  
-    
-
-
+   
 
 <!-- FOOTER (REDES, INFO, ETC.)-->
 
     <footer>
         <div class="contacto">
           <h2>Contactanos </h2>
-          <p><a href="formularioContacto.html">Envianos un email!</a></p>
+          <p><a href="./formularioContacto.html">Envianos un email!</a></p>
           <p><a href="https://www.google.com/maps/place/Maximus+(Retiro+de+productos+y+servicio+t%C3%A9cnico)/@-34.6239434,-58.4903361,16z/data=!4m6!3m5!1s0x95bcc987281898b3:0xe70eb30a0320e98d!8m2!3d-34.6223096!4d-58.4889558!16s%2Fg%2F11swl_zgy_?entry=ttu&g_ep=EgoyMDI0MTAxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Remedios de Escalada de <br> San Martín 3875 Floresta (CABA)</a></p>        
           <p><a href="https://www.whatsapp.com/" target="_blank">Whatsapp: +54 2664 2423-6302</a></p> 
           <p><a href="mailto:empresas@maximus.com.ar" target="_blank">empresas@maximus.com.ar</a></p>
@@ -215,10 +138,10 @@
         <div class="redes">
 
           <h2>Seguinos en nuestras redes</h2>
-          <a href="https://www.instagram.com/maximusgamingok/?hl=es" target="_blank"><img id="imgIconos" src="/images/imgInstagramLogo.jpg" alt="" width="60px"/></a>
-          <a href="https://www.facebook.com/Maximusgamingok" target="_blank"><img id="imgIconos" src="/images/imgFacebookLogo.png" alt="" width="60px" /></a>
-          <a id="youtube" href="https://www.youtube.com/c/MAXIMUSGAMINGTV" target="_blank"><img id="imgIconos" src="/images/imgYoutubeLogo.png" alt="" width="60px" /></a>
-          <a href="https://www.tiktok.com/@maximusgamingok" target="_blank"><img id="imgIconos" src="/images/imgTiktokLogo.webp" alt="" width="60px" /></a>
+          <a href="https://www.instagram.com/maximusgamingok/?hl=es" target="_blank"><img id="imgIconos" src="../images/imgInstagramLogo.jpg" alt="" width="60px"/></a>
+          <a href="https://www.facebook.com/Maximusgamingok" target="_blank"><img id="imgIconos" src="../images/imgFacebookLogo.png" alt="" width="60px" /></a>
+          <a id="youtube" href="https://www.youtube.com/c/MAXIMUSGAMINGTV" target="_blank"><img id="imgIconos" src="../images/imgYoutubeLogo.png" alt="" width="60px" /></a>
+          <a href="https://www.tiktok.com/@maximusgamingok" target="_blank"><img id="imgIconos" src="../images/imgTiktokLogo.webp" alt="" width="60px" /></a>
                  
         </div>
 
@@ -251,14 +174,87 @@
         </div>
         
         <div class="legales">          
-          <sub id="sub1"><a href="https://cace.org.ar/" target="_blank"><img src="/images/imgCace.svg" alt=""></a></sub><br>
-          <sub id="sub2"><a href="https://www.globalbluepoint.com/" target="_blank"><img src="/images/imgGBPERP.svg" alt=""></a></sub>
-          <sub id="sub3"><a href="https://servicioscf.afip.gob.ar/publico/denuncias/denunciaCD.aspx" target="_blank"><img src="/images/imDataWeb.png" alt=""></a></sub>
+          <sub id="sub1"><a href="https://cace.org.ar/" target="_blank"><img src="../images/imgCace.svg" alt=""></a></sub><br>
+          <sub id="sub2"><a href="https://www.globalbluepoint.com/" target="_blank"><img src="../images/imgGBPERP.svg" alt=""></a></sub>
+          <sub id="sub3"><a href="https://servicioscf.afip.gob.ar/publico/denuncias/denunciaCD.aspx" target="_blank"><img src="../images/imDataWeb.png" alt=""></a></sub>
         
         </div>
 
     </footer>
+    
+    <script src="../script.js"></script>
 
+   <!-- SCRIPT -->
+
+ <script >
+  function submitForm() {       
+      const nombre = document.getElementById('nombre').value;
+      const correo = document.getElementById('correo').value;
+      const telefono = document.getElementById('telefono').value;
+      const mensajeEnvio = document.getElementById('mensajeEnvio').value;
+          
+      const errores = []; 
+  
+  
+      const expresionesNombre= /^[a-zA-Z\s]{10,}$/;
+      const expresionesMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;   
+      const expresionesTelefono = /^\d{7,15}$/;
+
+  
+      //-- MANEJO DE ERRORES -<!
+  
+      if (!expresionesNombre.test(nombre)) 
+      errores.push("-Ingresa tu nombre y apellido por favor.");
+  
+      if (!expresionesMail.test(correo)) 
+      errores.push("-El correo no puede contener carecteres invalidos.");
+  
+      if (!expresionesTelefono.test(telefono)) 
+      errores.push("-Numero de telefono demasiiado corto.");
+  
+       if (mensajeEnvio.trim() === '') 
+      errores.push("Ingrese un mensaje en la caja de texto.");
+
+      const erroresDiv = document.getElementById('errores');
+      const mostrarDatos = document.getElementById('mensaje');
+
+  
+  
+
+      if (errores.length > 0) {
+          erroresDiv.innerHTML = errores.join('<br>');
+          mostrarDatos.innerHTML = '';
+      } else {
+      
+          erroresDiv.innerHTML = '';        
+          mostrarDatos.innerHTML = '';
+
+      
+      const datosEnviado = document.createElement('p');
+      datosEnviado.innerHTML = '<style>#formularioContainer{margin-bottom: 0px;}</style><b>Datos Enviados:</b>';
+      mostrarDatos.appendChild(datosEnviado);
+
+      const mostrarNombre = document.createElement('p');
+      mostrarNombre.innerHTML = `<b>Nombre:</b> ${nombre}`;
+      mostrarDatos.appendChild(mostrarNombre);
+
+      const mostrarCorreo = document.createElement('p');
+      mostrarCorreo.innerHTML = `<b>Correo Electronico:</b> ${correo}`;
+      mostrarDatos.appendChild(mostrarCorreo);
+
+      const mostrarNumero = document.createElement('p');
+      mostrarNumero.innerHTML = `<b>Numero Telefonico:</b> ${telefono}`;
+      mostrarDatos.appendChild(mostrarNumero);
+
+      const mostrarMensaje = document.createElement('p');
+      mostrarMensaje.innerHTML = `<b>Mensaje:</b> ${mensajeEnvio}`;
+      mostrarDatos.appendChild(mostrarMensaje);
+
+      document.getElementById('formulario').reset();
+      }
+  }
+
+</script>
     
 </body>
 </html>
