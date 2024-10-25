@@ -9,9 +9,12 @@ p, input {
   justify-content: space-between;
   background-color: black;
 }
+.secSub{
+  color: #595959;
+}
 a {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 .subCabecera ul {
   font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI,
@@ -22,7 +25,7 @@ a {
   display: flex;
   justify-content: space-around;
   list-style: none;
-  background-color: #181a1b;
+  background-color: #ffffff;
 }
 .cabeceraAlta {
   display: flex;
@@ -140,6 +143,7 @@ body {
 
 }
 
+/*<----acciones del boton dark mode----->*/
 #conteiner.active .toggle{
 left: 40px;
 
@@ -155,6 +159,17 @@ body.active{
 
 .celda.active{
   background-color: rgb(57,61,62);
+}
+
+.subCabecera.active{
+  background-color: #181a1b;
+}
+ul.active{
+  background-color: #181a1b;
+  color: #fff;
+}
+.secSub.active{
+  color: #fff;
 }
 
 
