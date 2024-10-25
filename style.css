@@ -135,7 +135,94 @@ body {
 
 
 
+/* -----SECCION GABINETES-----*/
 
+
+.gabinetes{
+  font-family: sans-serif;
+}
+
+#gabinetesContainer img{
+  width: 300px;
+  
+}
+
+.articulo label{
+  display: block;
+  margin: 20px;
+}
+
+.articulo{
+  border: 1px;
+  border-style: solid;
+  border-color: solid #595959;
+  margin: 20px; 
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.articulo #nombre{
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 80px;
+}
+
+.articulo #precio{
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.articulo span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.articulo #cuotas{
+  
+  
+  
+  border: 3px;
+  border-style: solid;
+  margin: auto;
+  text-align: center;
+  border-color:rgb(114,191,120);  
+  width: 80%;
+  height: 30px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 5px;
+}
+
+#gabinetesContainer #fila1, #gabinetesContainer #fila2{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+}
+
+.ver{
+  font-size: 16px;
+  border: 5px;
+  color: white;
+  text-align: center;
+  width: 82%;
+  height: 30px;
+  border-style: solid;
+  border-color: rgb(114,191,120);
+  background-color:rgb(114,191,120);
+  margin-bottom: 25px;
+}
+
+.articulo button :hover{
+  cursor: pointer;
+}
 
 
 

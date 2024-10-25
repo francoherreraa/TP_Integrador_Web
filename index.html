@@ -86,12 +86,68 @@
         <button class="avanzar" onclick="avanzarImgs()">&#8250</button>
     </div> 
   
+<!--DESTACADOS-->
 
-
-    <div> 
-      <section class="destacados">
-        <label for=""> DESTACADOS</label>
-      </section>
+    <div class="gabinetes">
+      <div id="gabinetesContainer">
+        <div id="fila1">
+        <article class="articulo">
+          <img src="./imagesDestacados/KF432C16BB-8_800.webp" alt="" width="300px" height="300px">
+          <label id="nombre" for="">Memoria Ram<br>Kingston Fury<br>Beast 8gb 3200 Mhz Ddr4</label>
+          <label id="precio" for=""><b>$24.300,00</b></label>
+          <span>Precio especial</span>
+          <label id="cuotas" for="">¡Hasta 12 cuotas fijas!</label>
+          <button class="ver">VER MAS</button>
+        </article>
+      
+        <article class="articulo">
+          <img src="./imagesDestacados/SA400S37-480G_800.webp" alt="" width="300px" height="300px">
+          <label id="nombre" for="">Disco Solido Ssd<br>480gb Kingston A400 Sata Iii<br>(Similar 500gb 512gb)</label>
+          <label id="precio" for=""><b>$39.300,00</b></label>
+          <span>Precio especial</span>
+          <label id="cuotas" for="">¡Hasta 12 cuotas fijas!</label>
+          <button class="ver">VER MAS</button>
+        </article>
+      
+        <article class="articulo">
+          <img src="./imagesDestacados/SNV2S-500G_800.webp" alt="" width="300px" height="300px">
+          <label id="nombre" for="">Disco Solido Ssd 500gb<br>Kingston Nv2 m.2 Nvme Pcie<br>X4 4.0 (Similar 480gb 512gb)</label>
+          <label id="precio" for=""><b>$45.000,00</b></label>
+          <span>Precio especial</span>
+          <label id="cuotas" for="">¡Hasta 12 cuotas fijas!</label>
+          <button class="ver">VER MAS</button>
+        </article>
+        </div>
+        
+        <div id="fila2">
+        <article class="articulo">
+          <img src="./imagesDestacados/SP-600AH2NKW_800.webp" alt="" width="300px" height="300px">
+          <label id="nombre" for="">Fuente 600w Thermaltake<br>Smart 80 Plus White</label>
+          <label id="precio" for=""><b>$75.100,00</b></label>
+          <span>Precio especial</span>
+          <label id="cuotas" for="">¡Hasta 12 cuotas fijas!</label>
+          <button class="ver">VER MAS</button>
+        </article>
+      
+        <article class="articulo">
+          <img src="./imagesDestacados/YD3200C5FHBOX_800.jpg" alt="" width="300px" height="300px">
+          <label id="nombre" for="">Micro Amd Ryzen 3 3200g <br>4.0Ghz + Rx Vega 8 Am4</label>
+          <label id="precio" for=""><b>$81.400,00</b></label>
+          <span>Precio especial</span>
+          <label id="cuotas" for="">¡Hasta 12 cuotas fijas!</label>
+          <button class="ver">VER MAS</button>
+        </article>
+      
+        <article class="articulo">
+          <img src="./imagesDestacados/90MB1500-M0EAY0_800.jpg" alt="" width="300px" height="300px">
+          <label id="nombre" for="">Motherboard Asus A520m-K<br>Prime Am4</label>
+          <label id="precio" for=""><b>$83.900,00</b></label>
+          <span>Precio especial</span>
+          <label id="cuotas" for="">¡Hasta 12 cuotas fijas!</label>
+          <button class="ver">VER MAS</button>
+        </article>
+        </div>
+      </div>
     </div>
 
 
@@ -203,5 +259,61 @@
       </footer>
 
       <script src="script.js"></script>
+
+      <script>
+        /*-------------------carrusel--------------------------*/
+const promo = document.querySelectorAll(".promo img");
+let intervalo = null;
+let numeroImg= 0;
+const imagenes = document.querySelector(".promo a")
+
+carruselInit(); 
+
+function carruselInit(){
+    
+    if(promo.length > 0){ 
+    promo[numeroImg].classList.add("carrusel");
+    intervalo = setInterval(avanzarImgs, 4000);   
+    }
+
+   
+}
+
+function incrementoPosicion(index){
+
+    
+    if(index >= promo.length){
+        numeroImg = 0;
+
+    }else if(index < 0){
+        numeroImg = promo.length = 1;
+    }
+
+    promo.forEach(slide => {
+        slide.classList.remove("carrusel");  
+    });
+
+
+//
+//  promo.add("mostar")
+    promo[numeroImg].classList.add("carrusel");
+
+
+//  promo.classList.add[numeroImagen]
+
+}
+
+function retrocederImgs(){
+    incrementoPosicion(numeroImg);   
+    numeroImg--;
+   
+}; 
+
+function avanzarImgs(){
+    incrementoPosicion(numeroImg);
+    numeroImg++;
+    
+}
+      </script>
   </body>
 </html>
