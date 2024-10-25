@@ -64,6 +64,26 @@
   </header>
 
 <body>
+  <!---formulario -->
+  
+  <form id="formulario" novalidate>
+        <div class="fondo">
+            <h1 class="formTitle">Iniciar Sesión con mi mail</h1>
+            <div class="mail">
+                <input type="email" id="mail" placeholder="Ingresar correo...">
+            </div>
+            <div class="pass">
+                <input type="password" id="contrasena" placeholder="Ingresar clave...">
+            </div>
+            <div class="boton">
+                <button type="button" id="btnLogin">LOGIN</button>
+            </div>
+            <p class="pol"><a href="https://www.maximus.com.ar/AYUDA2/centro-de-ayuda/maximus.aspx?id=caja2&cid=50">Política de Privacidad</a></p>
+            <p class="feedback" id="feedback">Inicio de sesión exitoso.</p>
+            <p class="error" id="error"></p>
+        </div>
+    </form>
+
    <!-- FOOTER (REDES, INFO, ETC.)-->
 
       <footer>
@@ -125,5 +145,25 @@
       </footer> 
       
       <script src="../script.js"></script>
+
+      <script>
+         document.getElementById("btnLogin").onclick = function() {
+            var email = document.getElementById("mail").value;
+            var password = document.getElementById("contrasena").value;
+            var feedback = document.getElementById("feedback");
+            var error = document.getElementById("error");
+
+            feedback.style.display = "none";
+            error.textContent = "";
+
+            if (email === "" || password === "") {
+                error.textContent = "Por favor, completa todos los campos.";
+            } else if (!email.includes("@")) {
+                error.textContent = "Por favor, ingresa un correo electrónico válido.";
+            } else {
+                feedback.style.display = "block";
+            }
+        }
+      </script>
 </body>
 </html>
