@@ -26,6 +26,7 @@ a {
   justify-content: space-around;
   list-style: none;
   background-color: #ffffff;
+  align-items: center;
 }
 .cabeceraAlta {
   display: flex;
@@ -113,6 +114,26 @@ body {
 .textoPerfil {
   margin-top: 20px;
 }
+
+.formularioContacto{
+  color: #1a5319;
+  background-color: #72bf78;
+  border-radius: 24px;
+  padding: 10px;
+  font-size: 20px;
+  
+}
+
+.formularioContacto :hover{
+  color: #d3ee98;
+  cursor: pointer;
+}
+
+
+
+
+
+
 
 
 /*-----boton dark mode-------*/
@@ -299,7 +320,7 @@ filter: invert(52%) sepia(0%) saturate(83%) hue-rotate(188deg) brightness(96%) c
 /* -----AJUSTES A CADA IMAGEN SPONSOR----- */
 
 
-#intel{
+.celda #intel{
   
   object-fit: contain;
   width: 70px;
@@ -308,7 +329,7 @@ filter: invert(52%) sepia(0%) saturate(83%) hue-rotate(188deg) brightness(96%) c
   
 }
 
-#amd{
+.celda #amd{
   object-fit: contain;
   width: 94px;
   margin-left: 32px;
@@ -316,14 +337,14 @@ filter: invert(52%) sepia(0%) saturate(83%) hue-rotate(188deg) brightness(96%) c
 
 }
 
-#asus{
+.celda #asus{
   object-fit: contain;
   width: 94px;
   margin-left: 32px;
   margin-right: 34px;
 }
 
-#hyperx{
+.celda #hyperx{
   object-fit: contain;
   width: 94px;
 
@@ -331,7 +352,7 @@ filter: invert(52%) sepia(0%) saturate(83%) hue-rotate(188deg) brightness(96%) c
   margin-right: 34px;
 }
 
-#msi{
+.celda #msi{
   object-fit: contain;
   width: 80px;
   margin-left: 40px;

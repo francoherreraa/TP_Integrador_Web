@@ -26,6 +26,7 @@ p, input {
     justify-content: space-around;
     list-style: none;
     background-color: #ffffff;
+    align-items: center;
   }
   .cabeceraAlta {
     display: flex;
@@ -119,6 +120,26 @@ p, input {
 body{
   background-color: #ffffff;
 }
+
+.formularioContacto{
+  color: #1a5319;
+  background-color: #72bf78;
+  border-radius: 24px;
+  padding: 10px;
+  font-size: 20px;
+  
+}
+
+.formularioContacto :hover{
+  color: #d3ee98;
+  cursor: pointer;
+}
+
+
+
+
+
+
 
  /* -----DISEÑO FOOTER----- */
 
