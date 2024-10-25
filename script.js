@@ -53,5 +53,20 @@ function avanzarImgs(){
     
 }
 
+/*<!boton dark mode--- >*/
+var toggle = document.getElementById('conteiner');
+var body = document.querySelector('body');
+var sponsor = document.getElementById('patrocinio');
+var celdas = document.querySelectorAll('.celda');
 
+toggle.onclick = function(){
+ toggle.classList.toggle('active');
+ body.classList.toggle('active');
+ sponsor.classList.toggle('active');
+ 
+ celdas.forEach(function(celda) {
+    celda.classList.toggle('active');
+  });
+
+}
 

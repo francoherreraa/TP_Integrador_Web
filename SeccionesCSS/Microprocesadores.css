@@ -114,7 +114,7 @@ p, input {
 /* -----DISEÑO BODY----- */
 
 body{
-  background-color: rgb(37, 36, 36);
+  background-color: #ffffff;
 }
 
  /* -----DISEÑO FOOTER----- */
@@ -184,4 +184,40 @@ footer h2{
 
 footer sub h2{
   color: #ffffff; 
+}
+
+/*-----boton dark mode-------*/
+
+#conteiner{
+  background-color: #08bc08;
+  position: relative;
+  width: 80px;
+  height: 40px;
+  box-shadow: inset 4px 4px 6px #01f603,
+              inset 4px 4px 6px #01f603;
+  cursor: pointer;
+  border-radius: 25px;
+  margin: 0px auto;            
+}
+
+.toggle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  transform: scale(.7);
+  background-color: linear-gradient(145deg, #ffffff, #181a1b);
+  border-radius: 25px;
+  box-shadow: 3px 3px 8px #000000,
+             -3px -3px 8px #000000;
+
+}
+
+#conteiner.active .toggle{
+left: 40px;
+
+}
+body.active{
+  background: rgb(36, 37, 39);
 }
