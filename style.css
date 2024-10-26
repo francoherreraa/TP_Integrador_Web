@@ -55,6 +55,13 @@ p {
 }
 header {
   size: 20cm;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; 
+  background-color: white;
+  z-index: 1000;
 }
 .logo {
   margin-top: 5px;
@@ -319,6 +326,8 @@ ul.active{
   width: 100%;
   margin: auto;
   overflow: hidden;
+  margin-top: 180px;
+  margin-bottom: 70px;
 }
 
 .promocionados img{
