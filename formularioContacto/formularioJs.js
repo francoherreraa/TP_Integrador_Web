@@ -1,34 +1,3 @@
-
-
-
-
-
-
-
-
-/* REVISAR
-function validarFormulario(){
-    const nombre = document.getElementById("nombre").value;
-    const correo = document.getElementById("correo").value;
-    const telefono = document.getElementById("telefono").value;
-    const texto = document.getElementById("texto").value;
-
-
-    let mostrarMensaje = `Datos Ingresados:<br>`;
-            mostrarMensaje += `Nombre: ${nombre}<br>`;       
-            mostrarMensaje += `Correo Electronico: ${correo}<br>`;
-            mostrarMensaje += `Numero de Telefono: ${telefono}<br>`;
-            mostrarMensaje += `Mensaje Enviado: ${texto}<br>`;
-            
-            
-            const mensaje = document.getElementById("mensaje");
-            mensaje.innerHTML = mostrarMensaje;
-        
-               
-}
-*/
-
-
 /*<!boton dark mode--- >*/
 var toggle = document.getElementById('conteiner');
 var body = document.body;

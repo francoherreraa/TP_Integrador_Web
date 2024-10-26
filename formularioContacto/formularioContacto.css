@@ -183,7 +183,6 @@ p, input {
 #mensaje{ 
   border-radius: 10px;
   background-color: #e9eed9;
-  display: flex;
 }
 
 #mensaje p{
@@ -242,7 +241,8 @@ button{
 
 button :hover{
   cursor: pointer;
-}
+} este es el css
+
 
 
 

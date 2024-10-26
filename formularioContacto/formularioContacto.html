@@ -84,39 +84,39 @@
     <!-- FORMULARIO CONTACTO -->
 
     <form class="formulario">
-        <div id="formularioContainer"> 
-            <p>Formulario de Contacto</p>
+      <div id="formularioContainer"> 
+          <p>Formulario de Contacto</p>
 
-            <div id="errores" class="error"></div>
+          <div id="errores" class="error"></div>
 
-            <div id="nombreDiv">
-                <p for="nombre">Nombre y Apellido:</p>
-                <input type="text" id="nombre" name="nombre">
-            </div>
+          <div id="nombreDiv">
+              <p for="nombre">Nombre y Apellido:</p>
+              <input type="text" id="nombre" name="nombre">
+          </div>
 
-            <div id="nombreDiv">
-                <p for="correo">Correo Electronico:</p>
-                <input type="text" id="correo" name="correo">
-            </div>
+          <div id="nombreDiv">
+              <p for="correo">Correo Electronico:</p>
+              <input type="text" id="correo" name="correo">
+          </div>
 
-            <div id="telefonoDiv">
-                <p for="telefono">Numero Telefonico (Sin espacios):</p>
-                <input type="text" id="telefono" name="telefono">
-            </div>
+          <div id="telefonoDiv">
+              <p for="telefono">Numero Telefonico (Sin espacios):</p>
+              <input type="text" id="telefono" name="telefono">
+          </div>
 
-            <div id="mensajeEnvioDiv">
-                <p for="mensajeEnvio">Mensaje:</p>
-                <textarea id="mensajeEnvio" rows="10" cols="50" name="mensajeEnvio"></textarea>
-            </div>
+          <div id="mensajeEnvioDiv">
+              <p for="mensajeEnvio">Mensaje:</p>
+              <textarea id="mensajeEnvio" rows="10" cols="50" name="mensajeEnvio"></textarea>
+          </div>
+          
+          
+              <button class="boton" type="button" onclick="submitForm()">Enviar</button>
             
-            
-                <button class="boton" type="button" onclick="submitForm()">Enviar</button>
-              
-        </div><br><div id="mensajeDatos">
-               <div id="mensaje" class="mensaje"></div>
-        </div> 
+      </div><br><div id="mensajeDatos">
+             <div id="mensaje" class="mensaje"></div>
+      </div> 
 
-    </form>
+  </form>
 
         
     <script src="../script.js"></script>
@@ -188,72 +188,73 @@
    <!-- SCRIPT -->
 
  <script >
-  function submitForm() {       
-      const nombre = document.getElementById('nombre').value;
-      const correo = document.getElementById('correo').value;
-      const telefono = document.getElementById('telefono').value;
-      const mensajeEnvio = document.getElementById('mensajeEnvio').value;
-          
-      const errores = []; 
-  
-  
-      const expresionesNombre= /^[a-zA-Z\s]{10,}$/;
-      const expresionesMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;   
-      const expresionesTelefono = /^\d{7,15}$/;
+ function submitForm() {       
+        const nombre = document.getElementById('nombre').value;
+        const correo = document.getElementById('correo').value;
+        const telefono = document.getElementById('telefono').value;
+        const mensajeEnvio = document.getElementById('mensajeEnvio').value;
+            
+        const errores = []; 
+    
+    
+        const expresionesNombre= /^[a-zA-Z\s]{10,}$/;
+        const expresionesMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;   
+        const expresionesTelefono = /^\d{7,15}$/;
 
-  
-      //-- MANEJO DE ERRORES -<!
-  
-      if (!expresionesNombre.test(nombre)) 
-      errores.push("-Ingresa tu nombre y apellido por favor.");
-  
-      if (!expresionesMail.test(correo)) 
-      errores.push("-El correo no puede contener carecteres invalidos.");
-  
-      if (!expresionesTelefono.test(telefono)) 
-      errores.push("-Numero de telefono demasiiado corto.");
-  
-       if (mensajeEnvio.trim() === '') 
-      errores.push("Ingrese un mensaje en la caja de texto.");
+    
+        //-- MANEJO DE ERRORES -<!
+    
+        if (!expresionesNombre.test(nombre)) 
+        errores.push("-Ingresa tu nombre y apellido por favor.");
+    
+        if (!expresionesMail.test(correo)) 
+        errores.push("-El correo no puede contener carecteres invalidos.");
+    
+        if (!expresionesTelefono.test(telefono)) 
+        errores.push("-Numero de telefono demasiiado corto.");
+    
+         if (mensajeEnvio.trim() === '') 
+        errores.push("Ingrese un mensaje en la caja de texto.");
 
-      const erroresDiv = document.getElementById('errores');
-      const mostrarDatos = document.getElementById('mensaje');
+        const erroresDiv = document.getElementById('errores');
+        const mostrarDatos = document.getElementById('mensaje');
 
-  
-  
+    
+    
 
-      if (errores.length > 0) {
-          erroresDiv.innerHTML = errores.join('<br>');
-          mostrarDatos.innerHTML = '';
-      } else {
-      
-          erroresDiv.innerHTML = '';        
-          mostrarDatos.innerHTML = '';
+        if (errores.length > 0) {
+            erroresDiv.innerHTML = errores.join('<br>');
+            mostrarDatos.innerHTML = '';
+        } else {
+        
+            erroresDiv.innerHTML = '';        
+            mostrarDatos.innerHTML = '';
 
-      
-      const datosEnviado = document.createElement('p');
-      datosEnviado.innerHTML = '<style>#formularioContainer{margin-bottom: 0px;}</style><b>Datos Enviados:</b>';
-      mostrarDatos.appendChild(datosEnviado);
+        
+        const datosEnviado = document.createElement('p');
+        datosEnviado.innerHTML = '<style>#formularioContainer{margin-bottom: 0px;}</style><b>Datos Enviados:</b>';
+        mostrarDatos.appendChild(datosEnviado);
 
-      const mostrarNombre = document.createElement('p');
-      mostrarNombre.innerHTML = `<b>Nombre:</b> ${nombre}`;
-      mostrarDatos.appendChild(mostrarNombre);
+        const mostrarNombre = document.createElement('p');
+        mostrarNombre.innerHTML = `<b>Nombre:</b> ${nombre}`;
+        mostrarDatos.appendChild(mostrarNombre);
 
-      const mostrarCorreo = document.createElement('p');
-      mostrarCorreo.innerHTML = `<b>Correo Electronico:</b> ${correo}`;
-      mostrarDatos.appendChild(mostrarCorreo);
+        const mostrarCorreo = document.createElement('p');
+        mostrarCorreo.innerHTML = `<b>Correo Electronico:</b> ${correo}`;
+        mostrarDatos.appendChild(mostrarCorreo);
 
-      const mostrarNumero = document.createElement('p');
-      mostrarNumero.innerHTML = `<b>Numero Telefonico:</b> ${telefono}`;
-      mostrarDatos.appendChild(mostrarNumero);
+        const mostrarNumero = document.createElement('p');
+        mostrarNumero.innerHTML = `<b>Numero Telefonico:</b> ${telefono}`;
+        mostrarDatos.appendChild(mostrarNumero);
 
-      const mostrarMensaje = document.createElement('p');
-      mostrarMensaje.innerHTML = `<b>Mensaje:</b> ${mensajeEnvio}`;
-      mostrarDatos.appendChild(mostrarMensaje);
+        const mostrarMensaje = document.createElement('p');
+        mostrarMensaje.innerHTML = `<b>Mensaje:</b> ${mensajeEnvio}`;
+        mostrarDatos.appendChild(mostrarMensaje);
 
-      document.getElementById('formulario').reset();
-      }
-  }
+        document.getElementById('formulario').reset();
+        }
+    }
+
 
 </script>
     
